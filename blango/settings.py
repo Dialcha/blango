@@ -51,6 +51,7 @@ class Dev(Configuration):
         'django.contrib.messages',
         'django.contrib.staticfiles',
         'blog',
+        'blango_auth',
         'crispy_forms',
         'crispy_bootstrap5',
         "debug_toolbar",
@@ -126,6 +127,8 @@ class Dev(Configuration):
             'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
         },
     ]
+
+    AUTH_USER_MODEL = "blango_auth.User"
 
 
     # Internationalization
