@@ -14,10 +14,12 @@ class Comment(models.Model):
     modified_at = models.DateTimeField(auto_now=True)
 
 class Tag(models.Model):
-  value = models.TextField(max_length=100, unique=True)
+    class Meta:
+        ordering = ["value"]
+    value = models.TextField(max_length=100, unique=True)
 
-  def __str__(self):
-    return self.value
+    def __str__(self):
+        return self.value
 
 class Post(models.Model):
     comments = GenericRelation(Comment)
