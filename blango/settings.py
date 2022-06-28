@@ -64,7 +64,8 @@ class Dev(Configuration):
         "rest_framework",
         "rest_framework.authtoken",
         "drf_yasg",
-        "django_filters"
+        "django_filters",
+        "versatileimagefield"
     ]
 
     REST_FRAMEWORK = {
@@ -188,6 +189,9 @@ class Dev(Configuration):
 
     USE_TZ = True
 
+    MEDIA_ROOT = BASE_DIR / "media"
+
+    MEDIA_URL = "/media/"
 
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/3.2/howto/static-files/
